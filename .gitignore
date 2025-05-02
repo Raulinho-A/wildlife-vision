@@ -179,6 +179,7 @@ data/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/dataloader/.gitkeep
+!data/annotations/.gitkeep
 
 # Ignore large model outputs
 models/*.h5
