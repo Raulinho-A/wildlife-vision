@@ -1,36 +1,47 @@
 # Sistema de Visión Artificial para Detección y Clasificación de Fauna Silvestre
 
-Este proyecto desarrolla un sistema basado en visión artificial y aprendizaje profundo para automatizar el análisis de datos obtenidos mediante cámaras trampa usadas en el monitoreo de fauna silvestre.
+Este proyecto desarrolla un sistema de visión computacional y aprendizaje profundo para automatizar el análisis de datos obtenidos mediante cámaras trampa usadas en el monitoreo de fauna silvestre.
 
 ## Objetivo
 
 Reducir el tiempo y esfuerzo del procesamiento manual de imágenes mediante:
 
-- Detección automática de animales.
-- Clasificación de especies.
+- Detección automática de animales en imágenes.
+- Clasificación de especies presentes.
+- Generación de métricas útiles para tareas de conservación.
 
-El sistema enfrenta retos como:
+El sistema aborda desafíos como:
 
-- Imágenes de baja calidad.
-- Desbalance entre clases.
-- Datos parcialmente anotados.
+- Imágenes de baja calidad y ruido ambiental.
+- Desbalance significativo entre clases de especies.
+- Datos incompletos o parcialmente anotados.
 
 ## Estado actual
 
-Estamos en fase experimental:
+Actualmente nos encontramos en fase experimental, trabajando en:
 
-- Preparación del dataset (recortes, augmentations).
-- Entrenamiento de modelos CNN sencillos como línea base.
-- Evaluación comparativa frente a transfer learning.
+- Preparación del dataset (recortes, balanceo, augmentations).
+- Entrenamiento de modelos CNN base para establecer líneas comparativas.
+- Exploración de técnicas de transfer learning para mejorar la robustez.
+- Evaluación y comparación de métricas avanzadas más allá del accuracy.
 
 ## Estructura del proyecto
 
-- Código fuente: `analyzer/`
+- Código fuente: `vision/`
 - Datos: `data/`
 - Modelos guardados: `models/`
-- Notebooks: `notebooks/`
-- Reportes: `reports/`
+- Notebooks de experimentación: `notebooks/`
+- Reportes y visualizaciones: `reports/`
 
----
+## Instalación del entorno
 
-**Nota:** Este README es provisional y se actualizará conforme avance el proyecto.
+1. Clonar este repositorio.
+2. Crear y activar un entorno virtual.
+3. Instalar las dependencias principales:
+   ```bash
+   pip install .
+   ```
+4. (Opcional) Instalar dependencias de desarrollo:
+   ```bash
+   pip install .[dev]
+   ```
