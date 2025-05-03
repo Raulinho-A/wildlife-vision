@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision"
+version = "0.1.0"
+description = "Proyecto de visión computacional para detección y clasificación de fauna silvestre"
+authors = [
+    { name = "Raulinho-A" },
+    { name = "DianCarolinee" },
+    { name = "Diego-cb18" },
+    { name = "77paucar" },
+    { name = "IamSebx" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "ipykernel",
+    "jupyter",
+    "pytest",
+    "pytest-cov",
+    "nbconvert",
+    "tqdm"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vision*"]

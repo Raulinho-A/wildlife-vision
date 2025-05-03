@@ -185,3 +185,5 @@ data/*
 models/*.h5
 models/*.ckpt
 
+# Local freeze files (developer snapshots)
+requirements.txt
