@@ -16,6 +16,12 @@ RAW = DATA_DIR / "raw"
 CLIPS = PROCESSED / "bboxes" / "clips"
 AUGMENTED = PROCESSED / "bboxes" / "augmented"
 
+# Dataloader
+
+TRAIN = DATALOADER / "train"
+VALID = DATALOADER / "valid"
+
+
 # Models
 MODELS_DIR = PROJ_ROOT / "models"
 

@@ -1,9 +1,10 @@
 import tensorflow as tf
-from tensorflow.keras import models, layers, regularizers, optimizers
+from tensorflow.keras import models, layers, regularizers, optimizers, Input
 
 def build_baseline_model(img_height, img_width, num_classes):
     model = models.Sequential([
-        layers.Rescaling(1./255, input_shape=(img_height, img_width, 3)),
+        Input(shape=(img_height, img_width, 3)),
+        layers.Rescaling(1./255),
 
         layers.Conv2D(32, 3, activation='relu'),
         layers.MaxPooling2D(),
