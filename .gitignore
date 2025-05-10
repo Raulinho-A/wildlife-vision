@@ -187,3 +187,6 @@ models/*.ckpt
 
 # Local freeze files (developer snapshots)
 requirements.txt
+
+# Models / checkpoints
+models/checkpoints/
