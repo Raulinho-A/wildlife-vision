@@ -138,3 +138,33 @@ def plot_training_history(history, title_prefix=""):
     plt.tight_layout()
     plt.show()
 
+def plot_training_history_from_dict(history_dict, title_prefix=""):
+    """
+    Grafica loss y accuracy de entrenamiento y validación desde un diccionario.
+    
+    Args:
+        history_dict: diccionario con las claves 'loss', 'val_loss', 'accuracy', 'val_accuracy'.
+        title_prefix: (opcional) texto para añadir al inicio de los títulos de las gráficas.
+    """
+    plt.figure(figsize=(12, 5))
+
+    # Loss
+    plt.subplot(1, 2, 1)
+    plt.plot(history_dict['loss'], label='Train Loss')
+    plt.plot(history_dict['val_loss'], label='Validation Loss', color='orange')
+    plt.title(f'{title_prefix}Loss: Train vs Validation')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+
+    # Accuracy
+    plt.subplot(1, 2, 2)
+    plt.plot(history_dict['accuracy'], label='Train Accuracy')
+    plt.plot(history_dict['val_accuracy'], label='Validation Accuracy', color='orange')
+    plt.title(f'{title_prefix}Accuracy: Train vs Validation')
+    plt.xlabel('Epochs')
+    plt.ylabel('Accuracy')
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
