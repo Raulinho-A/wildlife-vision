@@ -185,9 +185,11 @@ data/*
 # Ignore large model outputs
 models/*.h5
 models/*.ckpt
+*.h5
 
 # Local freeze files (developer snapshots)
 requirements.txt
 
 # Models / checkpoints
 models/checkpoints/
+notebooks/.gradio

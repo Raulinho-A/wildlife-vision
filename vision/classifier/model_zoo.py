@@ -36,3 +36,4 @@ def build_baseline_model(img_height, img_width, num_classes):
         metrics=['accuracy']
     )
     return model
+
